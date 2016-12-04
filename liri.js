@@ -69,4 +69,29 @@ if (userInput === 'movie-this'){
 }
 
 //Random Text
+if(userInput === "do-what-it-says"){
+	fs.readFile('random.txt', 'utf8', function(error, data){
+		if(error){
+			console.log("There is an error");
+		}else{
+			var result = data.split(',');
+			var song = result[2]
+			spotify.search({type: 'track', query: songLookUp}, function(err, data){
+		if (err){
+			console.log('Something went wrong we could not find your song');
+			return;
+		}
+		var results = data.tracks.items;
 
+		for (var i=0; i<results.length; i++){
+			console.log("result #" + (i+1));
+			console.log('Artist name: ' + results[i].artists[0].name);
+			console.log('Track name: ' + results[i].name);
+			console.log('Preview: ' + results[i].preview_url);
+			console.log('album name: ' + results[i].album.name);
+			console.log('---');
+		}
+	});
+		} 
+	})
+} 
