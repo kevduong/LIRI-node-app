@@ -1,0 +1,24 @@
+{
+  "name": "liri-node-app",
+  "version": "0.0.1",
+  "description": "Language Interpretation and recognition Interface: latest tweets, Spotify song info, & OMDB movies.",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevduong/LIRI-node-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevduong/LIRI-node-app/issues"
+  },
+  "homepage": "https://github.com/kevduong/LIRI-node-app/blob/master/README.mdb.com/SunnyE/liri-js#readme",
+  "dependencies": {
+    "request": "^2.73.0",
+    "spotify": "^0.3.0",
+    "twitter": "^1.3.0"
+  }
+}
